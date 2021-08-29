@@ -577,13 +577,13 @@ header #nav #logo img.logo2{
 header #nav select{
     width: 30%;
     height: 24px;
-    font-size: 12px;
+    font-size: 0.75em;
     margin-top: 17px;
 }
 header #nav p:nth-of-type(1),
 header #nav p:nth-of-type(2){
     margin: 20px 0 0 20px;
-    font-size: 12px;
+    font-size: 0.75em;
     align-content: center;
 }
 
