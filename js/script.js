@@ -69,7 +69,7 @@ var arrlang = {
         'line2' : "28th MTV Award 2019(Best Fight) 'Captain Marvel'",
         'vid' : 'VIDEOS',
         'continue' : 'TRAILERS',
-        'character' : 'CAHRACTERS',
+        'character' : 'CHARACTERS',
         'ch1' : 'CAPTAIN MARVEL',
         'ch2' : 'NICK FURY',
         'ch3' : 'YON-ROGG',
