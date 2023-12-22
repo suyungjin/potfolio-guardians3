@@ -21,17 +21,14 @@ var arrlang = {
         'vid' : '영상',
         'continue' : '예고편',
         'character' : '캐릭터',
-<<<<<<< HEAD
         'ch1' : '스타로드',
         'ch2' : '로켓',
         'ch3' : '그루트',
         'ch4' : '드렉스',
         'ch5' : '맨티스',
         'ch6' : '네뷸라',
-=======
         'ch1' : '스파이더맨',
         'ch2' : '닉 퓨리',
->>>>>>> 7aa9d828ce40615ca730e8dc3825df1074755677
         'detail' : '상세정보',
         'detailtitle1' : '오프라인 시청',
         'detailcontent1' : '저장 가능 콘텐츠',
@@ -94,17 +91,14 @@ var arrlang = {
         'vid' : 'VIDEOS',
         'continue' : 'TRAILERS',
         'character' : 'CHARACTERS',
-<<<<<<< HEAD
         'ch1' : 'Star Lord',
         'ch2' : 'Roket',
         'ch3' : 'Groot',
         'ch4' : 'Drax',
         'ch5' : 'Mantis',
         'ch6' : 'Nebula',
-=======
         'ch1' : 'SPIDERMAN',
         'ch2' : 'NICK FURY',
->>>>>>> 7aa9d828ce40615ca730e8dc3825df1074755677
         'detail' : 'More Details',
         'detailtitle1' : 'Watch offline',
         'detailcontent1' : 'Available to download',
