@@ -10,75 +10,140 @@ body{
 }
 
 header{
-    width:100%;
-    height: 60px;
-    background: #202020;
-    position: fixed;
-    z-index:999;
-    left:0;
-    top:0;
-}
-header #nav{
-    width: 95%;
-    margin: auto;
-    display: flex;
+    width: 100%;
     position: relative;
 }
-header #nav #logo{
-    vertical-align: top;
-    position: absolute;
-    top:0;
-    left: 0;
-    z-index: 10;
+header #nav{
+    margin: auto;
+    width: 100%;
+    height: 108px;
+    background: #202020;
+    position: fixed;
+    z-index: 102;
 }
 
-header #nav #logo img.logo2{
+#nav .hamb{
+    display: none;
+    position: absolute;
+    z-index: 5;
+    margin: auto;
+    margin-top: 20px;
+    padding-left: 20px;
+    fill: #fff;
+}
+
+#nav .show {
+    width: 100%;
+    transform: translateY(-108px);
+    transition: all .25s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100
+}
+
+#nav .hide {
+    transform: translateY(0);
+    transition: all .25s ease-in-out;
+}
+
+header #nav #nav-upper{
+    display: flex;
+    border-bottom: 1px solid #393939;
+}
+
+header #nav #nav-upper #logo{
+    padding: 0 20px;
+    vertical-align: top;
+    position: relative;
+}
+
+header #nav #nav-upper #logo img.logo2{
     display: none;
 }
 
-header #nav #header-right{
+header #nav #nav-upper #header-right{
     display: flex;
     box-sizing: border-box;
     position: absolute;
     top: 0;
     right: 0;
     z-index: 10;
+    padding: 0 20px;
 }
-header #nav select{
+header #nav #nav-upper select{
     background: black;
     color:white;
-    width:100px;
+    width: 60px;
     height: 40px;
     font-size:16px;
     border: 1px solid #707070;
     border-radius: 10px;
     margin-top: 10px;
 }
-header #nav p:nth-of-type(1),
-header #nav p:nth-of-type(2){
+header #nav #nav-upper p:nth-of-type(1),
+header #nav #nav-upper p:nth-of-type(2){
     font-size: 16px;
     margin: 18px 0px 0px 20px;
     cursor: pointer;
     color: white;
     font-family: 'Noto Sans KR';
 }
-header #nav p:nth-of-type(1){
+header #nav #nav-upper p:nth-of-type(1){
     position: relative;
 }
-header #nav p:nth-of-type(1)::after{
+header #nav #nav-upper p:nth-of-type(1)::after{
     content: '';
     width: 2px;
     height: 16px;
     background: white;
     position: absolute;
     top: 4px;
-    right: -9px;
+    right: -10px;
+}
+
+header #nav #nav-lower{
+    height: 48px;
+    margin: auto;
+    display: block;
+    transition: all 0.5s;
+}
+
+header #nav #nav-lower ul{
+    display: flex;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    width: 70%;
+}
+
+header #nav #nav-lower ul li{
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 10px 18px;
+    margin: 0 auto;
+    cursor: pointer;
+    list-style: none;
+}
+
+header #nav #nav-lower ul li p{
+    font-size: 16px;
+    color: white;
+}
+
+header #nav #nav-lower #join2, #login2{
+    display: none;
+}
+
+header #nav #nav-lower #join2 p, header #nav #nav-lower #login2 p{
+    color: #EE1D23;
+    font-weight: 400;
 }
 
 #main{
     width:100%;
     height:80vh;
-    background: url(../images/캡틴마블\ 메인베너.jpg) top/cover no-repeat;
+    background: url(../images/가디언즈메인베너.jpg) top/cover no-repeat;
     position: relative;
 }
 
@@ -110,13 +175,18 @@ header #nav p:nth-of-type(1)::after{
 #main .title{
     width:425px;
     height:287px;
-    background: url(../images/캡틴마블로고.com.png) 100%/100% no-repeat;
+    background: url(../images/가디언즈로고.png) 100%/100% no-repeat;
     position: absolute;
-    top:25%;
+    top:30%;
     left:7%;
     z-index:3;
 }
-#main ul{
+
+#main2{
+    margin-bottom: 50px;
+}
+
+#main2 ul{
     position: absolute;
     width: 500px;
     z-index: 10;
@@ -124,17 +194,25 @@ header #nav p:nth-of-type(1)::after{
     left:5%;
     color:white;
     font-size: 16px;
-    line-height: 1.5em;
+    line-height: 30px;
 }
-#main li:nth-of-type(1){
+
+#main2 li{
+    padding-top: 12px;
+}
+#main2 li:nth-of-type(1){
     color: white;
     font-size: 24px;
 }
-#main li:nth-of-type(2),
-#main li:nth-of-type(4){
-    line-height: 2.5em;
+#main2 li:nth-of-type(2),
+#main2 li:nth-of-type(4){
+    line-height: 20px;
     color:var(--text-grey);
     font-weight: bold;
+}
+
+#main2 li:nth-of-type(3){
+    line-height: 24px;
 }
 
 #content{
@@ -164,15 +242,15 @@ header #nav p:nth-of-type(1)::after{
 #content figure button{
     width: 125px;
     background: rgb(252, 20, 20);
-    font-size: 13px;
+    font-size: 14px;
     color:white;
     border:0;
     outline: 0;;
     border-radius: 0.5em;
-    height:35px;
+    height:36px;
     position: absolute;
     right: 30px;
-    top:13px;
+    top:14px;
     z-index: 3;
     cursor: pointer;
 }
@@ -182,7 +260,7 @@ header #nav p:nth-of-type(1)::after{
     height:auto;
     padding: 3% 0 3% 0;    
     text-align: center;
-    margin-top: 5%;
+    margin-top: 50px;
     position: relative;
 }
 #content div.line::before{
@@ -288,26 +366,26 @@ header #nav p:nth-of-type(1)::after{
     flex-direction: row;
 }
 #detail .character li{
-    flex: 0 1 18%;
+    flex: 0 1 12%;
     margin: 1%;
 }
 #detail .character li dl{
-    width: 270px;
+    width: 200px;
     height: 370px;
     margin: auto;
 }
 #detail .character li dt{
-    width: 270px;
+    width: 200px;
     height: 288px;
     cursor: pointer;
 }
 #detail .character li dd:nth-of-type(1){
-    width: 270px;
+    width: 200px;
     height: 10px;
     background: #EE1D23;
 }
 #detail .character li dd:nth-of-type(2){
-    width: 270px;
+    width: 200px;
     height: 72px;
     background: var(--main-color)
 }
@@ -318,23 +396,26 @@ header #nav p:nth-of-type(1)::after{
     transform: translateY(50%);
 }
 #detail .character li:nth-of-type(1) dt{
-    background: url(../images/캡틴마블캐릭터/캡틴마블.jpg)center/cover;
+    background: url(../images/캡틴마블캐릭터/스타로드.jpg)center/cover;
 }
 #detail .character li:nth-of-type(2) dt{
-    background: url(../images/캡틴마블캐릭터/닉퓨리.jpg)center/cover;
+    background: url(../images/캡틴마블캐릭터/로켓.jpg)center/cover;
 }
 #detail .character li:nth-of-type(3) dt{
-    background: url(../images/캡틴마블캐릭터/욘로그.jpg)center/cover;
+    background: url(../images/캡틴마블캐릭터/그루트.jpg)center/cover;
 }
 #detail .character li:nth-of-type(4) dt{
-    background: url(../images/캡틴마블캐릭터/마리아.jpg)center/cover;
+    background: url(../images/캡틴마블캐릭터/드렉스.jpg)center/cover;
 }
 #detail .character li:nth-of-type(5) dt{
-    background: url(../images/캡틴마블캐릭터/탈로스.jpg)center/cover;
+    background: url(../images/캡틴마블캐릭터/멘티스.jpg)center/cover;
+}
+#detail .character li:nth-of-type(6) dt{
+    background: url(../images/캡틴마블캐릭터/네뷸라.jpg)center/cover;
 }
 
 #detail .character li dt:hover{
-    background-size: 110%;
+    background-size: 140%;
 }
 
 article{
@@ -379,6 +460,7 @@ article #content2 ul li:nth-of-type(10) dt{
 
 article #content2 ul dd{
     color: white;
+    width: 240px;
 }
 article #content3{
     width: 85%;
@@ -388,7 +470,7 @@ article #content3{
 article #content3 p.similar{
     font: 700 30px/30px 'Noto Sans KR';
     color: white;
-    margin-bottom: 1%;
+    margin-bottom: 3%;
 }
 article #content3 ul{
     width: 100%;
@@ -448,12 +530,12 @@ article #content4{
 article #content4 p.notice{
     font: 700 30px/30px 'Noto Sans KR';
     color: white;
+    margin-bottom: 3%;
 }
 article #content4 ul{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 5%;
     justify-content: center;
 }
 article #content4 li{
@@ -473,10 +555,10 @@ article #content4 li dt{
 }
 
 article #content4 li:nth-of-type(1) dt{
-    background: url(../images/샹치\ 썸네일.jpg)center/cover;
+    background: url(../images/더마블스.jpg)center/cover;
 }
 article #content4 li:nth-of-type(2) dt{
-    background: url(../images/이터널스.jpg)center/cover;
+    background: url(../images/캡틴아메리카.jpg)center/cover;
 }
 article #content4 li dd:nth-of-type(1){
     font-size: 16px;
@@ -485,7 +567,7 @@ article #content4 li dd:nth-of-type(1){
 article #content4 li dd:nth-of-type(2){
     width: 520px;
     height: 60px;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: -0.65px;
     color: var(--text-grey);
 }
@@ -514,7 +596,7 @@ footer li:nth-of-type(1),
 footer li:nth-of-type(2),
 footer li:nth-of-type(3){
     flex: 0 1 20%;
-    font-size: 13px;
+    font-size: 14px;
 }
 footer li dl{
     height: 115px;
@@ -554,41 +636,106 @@ footer p:nth-of-type(2){
 }
 #main::after{background: none;}
 
+/* 태블릿 */
+@media screen and (max-width: 1200px){
+    header #nav{
+        height: auto;
+    }
+    #nav .hamb{
+        display: block;
+        cursor: pointer;
+        transform: translateY(0%);
+        top:0;
+        z-index: 0;
+    }
+    header #nav #nav-upper #logo{
+        margin: auto;
+    }
+    header #nav #nav-lower{
+        height: 100%;
+        width: 65%;
+        margin: auto;
+        background: #202020;
+        position: fixed;
+        z-index: 101;
+        left: -65%;
+    }
+    
+    header #nav #nav-lower ul{
+        display: block;
+        margin: 0;
+        text-align: left;
+        width: 100%;
+    }
+    
+    header #nav #nav-lower ul li{
+        font-weight: 700;
+        padding: 28px 24px;
+        margin: 0 auto;
+}
+    header #nav #nav-lower ul li p{
+        font-size: 18px;
+}
+
+    header #nav #nav-lower.on{
+        left: 0;
+    }
+
+    #join, #login{
+        display: none;
+    }
+
+    header #nav #nav-lower #join2{
+        border-top: 1px solid #fff;
+    }
+
+    header #nav #nav-lower #join2, #login2{
+        display: block;
+    }
+
+    
+    #content section #vidtitle{
+        width: 100%;
+    }
+
+}
+
 /* 모바일 */
-@media screen and (max-width: 600px){
+@media screen and (max-width: 500px){
     body{
         background: var(--main-color);
     }
+
 #main .title{
     width: 60%;
     left: 50%;
-    top:45%;
+    top:25%;
     transform: translateX(-50%);
 }
 header #nav{
     margin: 0 auto;
 }
 
-header #nav #logo img.logo1{
+header #nav #nav-upper #logo img.logo1{
     display: none;
 }
-header #nav #logo img.logo2{
+header #nav #nav-upper #logo img.logo2{
     display: block;
 }
-header #nav select{
+header #nav #nav-upper select{
     width: 30%;
     height: 24px;
     font-size: 12px;
     margin-top: 17px;
 }
-header #nav p:nth-of-type(1),
-header #nav p:nth-of-type(2){
+header #nav #nav-upper p:nth-of-type(1),
+header #nav #nav-upper p:nth-of-type(2){
     margin: 20px 0 0 14px;
     font-size: 12px;
     align-content: center;
 }
 
-header #nav p:nth-of-type(1)::after{
+header #nav #nav-upper p:nth-of-type(1)::after{
     top:2px;
 }
 
@@ -596,8 +743,18 @@ header{
     display: flex;
 }
 
+header #nav #nav-upper select {
+    width: 40px;
+    height: 30px;
+}
+
+header #nav #nav-lower{
+    width: 100%;
+    left: -100%;
+}
+
 #main{
-    background: url(../images/캡틴마블배너2.jpg) center/cover;
+    background: url(../images/가디언즈오브갤럭시배너2.jpg) center/cover;
     height:40vh;
 }
 #main::before{
@@ -626,20 +783,18 @@ header{
     bottom: 0;
     left:0;
 }
-#main .title{
-    top:20%;
-}
-#main ul{
-    width: 90%;
+#main2 ul{
+    width: 85%;
     left: 50%;
     transform: translateX(-50%);
-    top:110%;
-    font-size: 3em;
-    line-height: 2em;
+    top:0;
+    font-size: 14px;
+    line-height: 50px;
+    position: relative;
 }
 
-#main li:nth-of-type(1){
-    font-size: 2em;
+#detail .character li dt{
+    height: 60%;
 }
 
 article #content3 p.similar{
@@ -647,7 +802,8 @@ article #content3 p.similar{
 }
 
 #content{
-    margin-top: 60%;
+    margin-top: 0;
+    position: relative;
 }
 
 #content section #vidtitle{
@@ -681,16 +837,15 @@ article #content3 p.similar{
     align-content: center;
     display: flex;
     flex-direction: column;
-    margin-top: 15%;
 }
 
 #content div.line p{
-    font: 13px/16px 'Noto Sans KR';
+    font: 14px 'Noto Sans KR';
     color: white;
 }
 
 #content section{
-    margin-top: 15%;
+    margin-top: 50px;
 }
 #content section li{
     flex: 0 1 100%;
@@ -720,9 +875,16 @@ article #content3 p.similar{
     width: 100%;
     
 }
+#detail .character li dt:hover{
+    background-size: 110%;
+}
 
 article #content2 ul dl{
     padding: 30px 0;
+}
+
+article #content2 ul li{
+    flex: 0 1 100%;
 }
 
 article #content3 ul li{
