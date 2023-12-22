@@ -203,6 +203,7 @@ header #nav #nav-lower #join2 p, header #nav #nav-lower #login2 p{
 #main2 li:nth-of-type(1){
     color: white;
     font-size: 24px;
+    line-height: 28px;
 }
 #main2 li:nth-of-type(2),
 #main2 li:nth-of-type(4){
@@ -827,6 +828,7 @@ article #content3 p.similar{
 #content div#detail p.txt1{
     color: white;
     width: 50%;
+    height: 8vh;
 }
 
 #detail .character li dd:nth-of-type(2) p{
