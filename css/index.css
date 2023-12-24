@@ -397,22 +397,22 @@ header #nav #nav-lower #join2 p, header #nav #nav-lower #login2 p{
     transform: translateY(50%);
 }
 #detail .character li:nth-of-type(1) dt{
-    background: url(../images/캡틴마블캐릭터/스타로드.jpg)center/cover;
+    background: url(../images/가디언즈오브갤럭시캐릭터/스타로드.jpg)center/cover;
 }
 #detail .character li:nth-of-type(2) dt{
-    background: url(../images/캡틴마블캐릭터/로켓.jpg)center/cover;
+    background: url(../images/가디언즈오브갤럭시캐릭터/로켓.jpg)center/cover;
 }
 #detail .character li:nth-of-type(3) dt{
-    background: url(../images/캡틴마블캐릭터/그루트.jpg)center/cover;
+    background: url(../images/가디언즈오브갤럭시캐릭터/그루트.jpg)center/cover;
 }
 #detail .character li:nth-of-type(4) dt{
-    background: url(../images/캡틴마블캐릭터/드렉스.jpg)center/cover;
+    background: url(../images/가디언즈오브갤럭시캐릭터/드렉스.jpg)center/cover;
 }
 #detail .character li:nth-of-type(5) dt{
-    background: url(../images/캡틴마블캐릭터/멘티스.jpg)center/cover;
+    background: url(../images/가디언즈오브갤럭시캐릭터/멘티스.jpg)center/cover;
 }
 #detail .character li:nth-of-type(6) dt{
-    background: url(../images/캡틴마블캐릭터/네뷸라.jpg)center/cover;
+    background: url(../images/가디언즈오브갤럭시캐릭터/네뷸라.jpg)center/cover;
 }
 
 #detail .character li dt:hover{
