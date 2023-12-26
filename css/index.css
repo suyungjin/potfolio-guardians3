@@ -973,4 +973,7 @@ footer p:nth-of-type(2){
     #content div#detail p.txt1{
         height: auto;
     }
+    article #content2 ul dl{
+        padding: 10px 0;
+    }
 }
