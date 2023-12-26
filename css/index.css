@@ -976,4 +976,18 @@ footer p:nth-of-type(2){
     article #content2 ul dl{
         padding: 10px 0;
     }
+    article #content4 li dt{
+        width: 310px;
+        height: 180px;
+    }
+    article #content4 li dl{
+        width: 310px;
+        height: 280px;
+    }
+    article #content4 li dd:nth-of-type(2){
+        width: 310px;
+    }
+    footer{
+        padding-top: 0;
+    }
 }
