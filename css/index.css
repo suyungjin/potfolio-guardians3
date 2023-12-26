@@ -131,6 +131,10 @@ header #nav #nav-lower ul li p{
     color: white;
 }
 
+header #nav #nav-lower ul li p:hover{
+    color: orange;
+}
+
 header #nav #nav-lower #join2, #login2{
     display: none;
 }
@@ -174,7 +178,7 @@ header #nav #nav-lower #join2 p, header #nav #nav-lower #login2 p{
 
 #main .title{
     width:425px;
-    height:287px;
+    height:250px;
     background: url(../images/가디언즈로고.png) 100%/100% no-repeat;
     position: absolute;
     top:30%;
@@ -654,7 +658,7 @@ footer p:nth-of-type(2){
     }
     header #nav #nav-lower{
         height: 100%;
-        width: 65%;
+        width: 30%;
         margin: auto;
         background: #202020;
         position: fixed;
@@ -699,6 +703,18 @@ footer p:nth-of-type(2){
         width: 100%;
     }
 
+}
+
+@media screen and (max-height: 800px){
+    header #nav #nav-lower ul li{
+        padding: 10px 24px;
+    }
+    #main2 li{
+        padding-top: 0;
+    }
+    #content section #vidtitle{
+        height: auto;
+    }
 }
 
 /* 모바일 */
@@ -752,6 +768,10 @@ header #nav #nav-upper select {
 header #nav #nav-lower{
     width: 100%;
     left: -100%;
+}
+
+header #nav #nav-lower ul li{
+    padding: 16px 24px;
 }
 
 #main{
@@ -935,4 +955,19 @@ footer li:nth-of-type(4) dl{
 footer p:nth-of-type(2){
     padding: 20px;
 }
+}
+@media screen and (max-height: 450px){
+    #main{
+        height: 115vh;
+    }
+    #main .title{
+        display: none;
+    }
+    #content section li{
+        margin: 5%;
+    }
+    #content section li iframe{
+        width: 540px;
+        height: 300px;
+    }
 }
