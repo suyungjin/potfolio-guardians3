@@ -26,7 +26,7 @@ var arrlang = {
         'ch3' : '그루트',
         'ch4' : '드렉스',
         'ch5' : '맨티스',
-        'ch6' : '네뷸라'
+        'ch6' : '네뷸라',
         'detail' : '상세정보',
         'detailtitle1' : '오프라인 시청',
         'detailcontent1' : '저장 가능 콘텐츠',
